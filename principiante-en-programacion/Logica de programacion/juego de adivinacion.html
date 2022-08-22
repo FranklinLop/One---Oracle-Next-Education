@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINANZA</h1>
+
+<script>
+
+   function saltarlinea() {
+   
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+
+   }
+
+   function imprimir(frase) {
+
+      document.write(frase);
+      saltarlinea();
+
+   }
+
+   function sortear(limite) {
+
+      return Math.round(Math.random()*limite);
+   }
+   
+   var numeroSorteo = parseInt(prompt("Ingrese el limite"));   
+   var numeroPensado = sortear(numeroSorteo);
+   var intentos = 3;
+   var contador = 1;
+
+   while (contador <= intentos) {
+
+      var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-" + numeroSorteo));
+
+      if (numeroPensado == numeroLanzado){
+
+         break;
+      }
+
+      else{
+         if (numeroLanzado > numeroPensado){
+            alert("usted erró");
+         } 
+            else{
+               alert("usted erró");
+            }
+      }
+      contador++;
+}
+
+   if (numeroPensado == numeroLanzado) {
+
+      imprimir("Usted acerto en el intento " + contador + " el numero era " + numeroPensado);
+   }
+
+   else {
+
+      imprimir("Usted erro, el numero pensado era " + numeroPensado);
+   }
+
+   imprimir("fin")
+
+</script>
+
